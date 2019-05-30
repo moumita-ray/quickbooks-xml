@@ -1,24 +1,4 @@
 <?php
-
-/**
- * Example QuickBooks SOAP Server / Web Service
- * 
- * This is an example Web Service which imports Invoices currently stored 
- * within QuickBooks desktop editions and then stores those invoices in a MySQL 
- * database. It communicates with QuickBooks via the QuickBooks Web Connector.  
- * 
- * If you have not already looked at the more basic docs/example_server.php, 
- * you may want to consider looking at that example before you dive into this 
- * example, as the requests and processing are a bit simpler and the 
- * documentation a bit more verbose.
- * 
- * 
- * @author Keith Palmer <keith@consolibyte.com>
- * 
- * @package QuickBooks
- * @subpackage Documentation
- */
-
 // I always program in E_STRICT error mode... 
 error_reporting(E_ALL | E_STRICT);
 ini_set('display_errors', 1);
@@ -41,17 +21,6 @@ if (function_exists('date_default_timezone_set'))
 // Require the framework
 require_once 'QuickBooks.php';
 
-// A username and password you'll use in: 
-//	a) Your .QWC file
-//	b) The Web Connector
-//	c) The QuickBooks framework
-//
-// 	NOTE: This has *no relationship* with QuickBooks usernames, Windows usernames, etc. 
-// 		It is *only* used for the Web Connector and SOAP server! 
-// 
-// If you wanted to allow others to log in, you'd create a .QWC file for each 
-//	individual user, and add each individual user to the auth database with the 
-//	QuickBooks_Utilities::createUser($dsn, $username, $password); static method.
 $user = 'quickbooks';
 $pass = 'password';
 
@@ -100,18 +69,9 @@ define('QB_PRIORITY_INVOICE', 0);
  */
 define('QB_QUICKBOOKS_MAILTO', 'keith@consolibyte.com');
 
-// The next three parameters, $map, $errmap, and $hooks, are callbacks which 
-//	will be called when certain actions/events/requests/responses occur within 
-//	the framework.
-
 // Map QuickBooks actions to handler functions
 $map = array(
-	//QUICKBOOKS_IMPORT_SALESRECEIPT => array( '_quickbooks_salesreceipt_import_request', '_quickbooks_salesreceipt_import_response' ), 
-	//QUICKBOOKS_IMPORT_PURCHASEORDER => array( '_quickbooks_purchaseorder_import_request', '_quickbooks_purchaseorder_import_response' ),
-	//QUICKBOOKS_IMPORT_INVOICE => array( '_quickbooks_invoice_import_request', '_quickbooks_invoice_import_response' ),
 	QUICKBOOKS_IMPORT_CUSTOMER => array( '_quickbooks_customer_import_request', '_quickbooks_customer_import_response' ), 
-	//QUICKBOOKS_IMPORT_SALESORDER => array( '_quickbooks_salesorder_import_request', '_quickbooks_salesorder_import_response' ), 
-	//QUICKBOOKS_IMPORT_ITEM => array( '_quickbooks_item_import_request', '_quickbooks_item_import_response' ), 
 	);
 
 // Error handlers
@@ -128,9 +88,9 @@ $hooks = array(
 
 // Logging level
 //$log_level = QUICKBOOKS_LOG_NORMAL;
-//$log_level = QUICKBOOKS_LOG_VERBOSE;
+$log_level = QUICKBOOKS_LOG_VERBOSE;
 //$log_level = QUICKBOOKS_LOG_DEBUG;				// Use this level until you're sure everything works!!!
-$log_level = QUICKBOOKS_LOG_DEVELOP;
+//$log_level = QUICKBOOKS_LOG_DEVELOP;
 
 // What SOAP server you're using 
 //$soapserver = QUICKBOOKS_SOAPSERVER_PHP;			// The PHP SOAP extension, see: www.php.net/soap
@@ -151,12 +111,6 @@ $callback_options = array(
 	);
 
 // * MAKE SURE YOU CHANGE THE DATABASE CONNECTION STRING BELOW TO A VALID MYSQL USERNAME/PASSWORD/HOSTNAME *
-// 
-// This assumes that:
-//	- You are connecting to MySQL with the username 'root'
-//	- You are connecting to MySQL with an empty password
-//	- Your MySQL server is located on the same machine as the script ( i.e.: 'localhost', if it were on another machine, you might use 'other-machines-hostname.com', or '192.168.1.5', or ... etc. )
-//	- Your MySQL database name containing the QuickBooks tables is named 'quickbooks' (if the tables don't exist, they'll be created for you) 
 $dsn = 'mysqli://root:@localhost/quickbooks_sqli';
 $dblink = mysqli_connect("localhost", "root", "", "quickbooks_sqli");
 /**
@@ -168,25 +122,6 @@ $file = dirname(__FILE__) . '\example.sql';
 // If we haven't done our one-time initialization yet, do it now!
 if (!QuickBooks_Utilities::initialized($dsn))
 {
-	// Create the example tables
-	if (file_exists($file))
-	{
-		$contents = file_get_contents($file);	
-		foreach (explode(';', $contents) as $sql)
-		{
-			if (!trim($sql))
-			{
-				continue;
-			}
-			
-			mysqli_query($dblink, $sql) or die(trigger_error(mysqli_connect_error()));
-		}
-	}
-	else
-	{
-		die('Could not locate "./example.sql" to create the demo SQL schema!');
-	}
-	
 	// Create the database tables
 	QuickBooks_Utilities::initialize($dsn);
 	
@@ -202,14 +137,6 @@ QuickBooks_WebConnector_Queue_Singleton::initialize($dsn);
 $Server = new QuickBooks_WebConnector_Server($dsn, $map, $errmap, $hooks, $log_level, $soapserver, QUICKBOOKS_WSDL, $soap_options, $handler_options, $driver_options, $callback_options);
 $response = $Server->handle(true, true);
 
-/*
-// If you wanted, you could do something with $response here for debugging
-
-$fp = fopen('/path/to/file.log', 'a+');
-fwrite($fp, $response);
-fclose($fp);
-*/
-
 /**
  * Login success hook - perform an action when a user logs in via the Web Connector
  *
@@ -223,37 +150,14 @@ function _quickbooks_hook_loginsuccess($requestID, $user, $hook, &$err, $hook_da
 	$Queue = QuickBooks_WebConnector_Queue_Singleton::getInstance();
 	$date = '1983-01-02 12:01:01';
 	
-	// Set up the invoice imports
-	if (!_quickbooks_get_last_run($user, QUICKBOOKS_IMPORT_INVOICE))
-	{
-		// And write the initial sync time
-		_quickbooks_set_last_run($user, QUICKBOOKS_IMPORT_INVOICE, $date);
-	}
-	
-	// Do the same for customers
+	// Set up the customer imports
 	if (!_quickbooks_get_last_run($user, QUICKBOOKS_IMPORT_CUSTOMER))
 	{
 		_quickbooks_set_last_run($user, QUICKBOOKS_IMPORT_CUSTOMER, $date);
 	}
 
-	// ... and for sales orders
-	if (!_quickbooks_get_last_run($user, QUICKBOOKS_IMPORT_SALESORDER))
-	{
-		_quickbooks_set_last_run($user, QUICKBOOKS_IMPORT_SALESORDER, $date);
-	}
-	
-	// ... and for items
-	if (!_quickbooks_get_last_run($user, QUICKBOOKS_IMPORT_ITEM))
-	{
-		_quickbooks_set_last_run($user, QUICKBOOKS_IMPORT_ITEM, $date);
-	}
-	
 	// Make sure the requests get queued up
-	//$Queue->enqueue(QUICKBOOKS_IMPORT_SALESORDER, 1, QB_PRIORITY_SALESORDER, null, $user);
-	//$Queue->enqueue(QUICKBOOKS_IMPORT_INVOICE, 1, QB_PRIORITY_INVOICE, null, $user);
-	//$Queue->enqueue(QUICKBOOKS_IMPORT_PURCHASEORDER, 1, QB_PRIORITY_PURCHASEORDER, null, $user);
 	$Queue->enqueue(QUICKBOOKS_IMPORT_CUSTOMER, 1, QB_PRIORITY_CUSTOMER, null, $user);
-	//$Queue->enqueue(QUICKBOOKS_IMPORT_ITEM, 1, QB_PRIORITY_ITEM, null, $user);
 }
 
 /**
@@ -368,15 +272,10 @@ function _quickbooks_customer_import_response($requestID, $user, $action, $ID, $
 		
 		$Queue = QuickBooks_WebConnector_Queue_Singleton::getInstance();
 		$Queue->enqueue(QUICKBOOKS_IMPORT_CUSTOMER, null, QB_PRIORITY_CUSTOMER, array( 'iteratorID' => $idents['iteratorID'] ), $user);
-	}
-	
-	// This piece of the response from QuickBooks is now stored in $xml. You 
-	//	can process the qbXML response in $xml in any way you like. Save it to 
-	//	a file, stuff it in a database, parse it and stuff the records in a 
-	//	database, etc. etc. etc. 
-	//	
-	// The following example shows how to use the built-in XML parser to parse 
-	//	the response and stuff it into a database. 
+	}else{
+
+		return true;
+	} 
 	
 	// Import all of the records
 	$errnum = 0;
@@ -389,25 +288,106 @@ function _quickbooks_customer_import_response($requestID, $user, $action, $ID, $
 		
 		foreach ($List->children() as $Customer)
 		{
+			$is_active = $Customer->getChildDataAt('CustomerRet IsActive');
+			$is_active_val = ($is_active == true ? '1' : '0');
+			
 			$arr = array(
 				'ListID' => $Customer->getChildDataAt('CustomerRet ListID'),
 				'TimeCreated' => $Customer->getChildDataAt('CustomerRet TimeCreated'),
 				'TimeModified' => $Customer->getChildDataAt('CustomerRet TimeModified'),
+				'EditSequence' => $Customer->getChildDataAt('CustomerRet EditSequence'),
 				'Name' => $Customer->getChildDataAt('CustomerRet Name'),
 				'FullName' => $Customer->getChildDataAt('CustomerRet FullName'),
+				'IsActive' => $is_active_val,
+				'Parent_ListID' => $Customer->getChildDataAt('CustomerRet Parent ListID'),
+				'Parent_FullName' => $Customer->getChildDataAt('CustomerRet Parent FullName'),
+				'Sublevel' => $Customer->getChildDataAt('CustomerRet Sublevel'),
+				'CompanyName' => $Customer->getChildDataAt('CustomerRet CompanyName'),
+				'Salutation' => $Customer->getChildDataAt('CustomerRet Salutation'),
 				'FirstName' => $Customer->getChildDataAt('CustomerRet FirstName'),
 				'MiddleName' => $Customer->getChildDataAt('CustomerRet MiddleName'),
 				'LastName' => $Customer->getChildDataAt('CustomerRet LastName'),
-				'Contact' => $Customer->getChildDataAt('CustomerRet Contact'),
+				'BillAddress_Addr1' => $Customer->getChildDataAt('CustomerRet BillAddress Addr1'),
+				'BillAddress_Addr2' => $Customer->getChildDataAt('CustomerRet BillAddress Addr2'),
+				'BillAddress_Addr3' => $Customer->getChildDataAt('CustomerRet BillAddress Addr3'),
+				'BillAddress_Addr4' => $Customer->getChildDataAt('CustomerRet BillAddress Addr4'),
+				'BillAddress_Addr5' => $Customer->getChildDataAt('CustomerRet BillAddress Addr5'),
+				'BillAddress_City' => $Customer->getChildDataAt('CustomerRet BillAddress City'),
+				'BillAddress_State' => $Customer->getChildDataAt('CustomerRet BillAddress State'),
+				'BillAddress_PostalCode' => $Customer->getChildDataAt('CustomerRet BillAddress PostalCode'),
+				'BillAddress_Country' => $Customer->getChildDataAt('CustomerRet BillAddress Country'),
+				'BillAddress_Note' => $Customer->getChildDataAt('CustomerRet BillAddress Note'),
+				'BillAddressBlock_Addr1' => $Customer->getChildDataAt('CustomerRet BillAddressBlock Addr1'),
+				'BillAddressBlock_Addr2' => $Customer->getChildDataAt('CustomerRet BillAddressBlock Addr2'),
+				'BillAddressBlock_Addr3' => $Customer->getChildDataAt('CustomerRet BillAddressBlock Addr3'),
+				'BillAddressBlock_Addr4' => $Customer->getChildDataAt('CustomerRet BillAddressBlock Addr4'),
+				'BillAddressBlock_Addr5' => $Customer->getChildDataAt('CustomerRet BillAddressBlock Addr5'),
 				'ShipAddress_Addr1' => $Customer->getChildDataAt('CustomerRet ShipAddress Addr1'),
 				'ShipAddress_Addr2' => $Customer->getChildDataAt('CustomerRet ShipAddress Addr2'),
+				'ShipAddress_Addr3' => $Customer->getChildDataAt('CustomerRet ShipAddress Addr3'),
+				'ShipAddress_Addr4' => $Customer->getChildDataAt('CustomerRet ShipAddress Addr4'),
+				'ShipAddress_Addr5' => $Customer->getChildDataAt('CustomerRet ShipAddress Addr5'),
 				'ShipAddress_City' => $Customer->getChildDataAt('CustomerRet ShipAddress City'),
 				'ShipAddress_State' => $Customer->getChildDataAt('CustomerRet ShipAddress State'),
 				'ShipAddress_PostalCode' => $Customer->getChildDataAt('CustomerRet ShipAddress PostalCode'),
+				'ShipAddress_Country' => $Customer->getChildDataAt('CustomerRet ShipAddress Country'),
+				'ShipAddressBlock_Addr1' => $Customer->getChildDataAt('CustomerRet ShipAddressBlock Addr1'),
+				'ShipAddressBlock_Addr2' => $Customer->getChildDataAt('CustomerRet ShipAddressBlock Addr2'),
+				'ShipAddressBlock_Addr3' => $Customer->getChildDataAt('CustomerRet ShipAddressBlock Addr3'),
+				'ShipAddressBlock_Addr4' => $Customer->getChildDataAt('CustomerRet ShipAddressBlock Addr4'),
+				'ShipAddressBlock_Addr5' => $Customer->getChildDataAt('CustomerRet ShipAddressBlock Addr5'),
+				'ShipAddress_Country' => $Customer->getChildDataAt('CustomerRet ShipAddress Country'),
+				'Phone' => $Customer->getChildDataAt('CustomerRet Phone'),
+				'AltPhone' => $Customer->getChildDataAt('CustomerRet AltPhone'),
+				'Fax' => $Customer->getChildDataAt('CustomerRet Fax'),
+				'Email' => $Customer->getChildDataAt('CustomerRet Email'),
+				'AltEmail' => $Customer->getChildDataAt('CustomerRet AltEmail'),
+				'Contact' => $Customer->getChildDataAt('CustomerRet Contact'),
+				'AltContact' => $Customer->getChildDataAt('CustomerRet AltContact'),
+				'CustomerType_ListID' => $Customer->getChildDataAt('CustomerRet CustomerType ListID'),
+				'CustomerType_FullName' => $Customer->getChildDataAt('CustomerRet CustomerType FullName'),
+				'Terms_ListID' => $Customer->getChildDataAt('CustomerRet Terms ListID'),
+				'Terms_FullName' => $Customer->getChildDataAt('CustomerRet Terms FullName'),
+				'SalesRep_ListID' => $Customer->getChildDataAt('CustomerRet SalesRep ListID'),
+				'SalesRep_FullName' => $Customer->getChildDataAt('CustomerRet SalesRep FullName'),
+				'Balance' => $Customer->getChildDataAt('CustomerRet Balance'),
+				'TotalBalance' => $Customer->getChildDataAt('CustomerRet TotalBalance'),
+				'SalesTaxCode_ListID' => $Customer->getChildDataAt('CustomerRet SalesTaxCode ListID'),
+				'SalesTaxCode_FullName' => $Customer->getChildDataAt('CustomerRet SalesTaxCode FullName'),
+				'ItemSalesTax_ListID' => $Customer->getChildDataAt('CustomerRet ItemSalesTax ListID'),
+				'ItemSalesTax_FullName' => $Customer->getChildDataAt('CustomerRet ItemSalesTax FullName'),
+				'ResaleNumber' => $Customer->getChildDataAt('CustomerRet ResaleNumber'),
+				'AccountNumber' => $Customer->getChildDataAt('CustomerRet AccountNumber'),
+				'CreditLimit' => $Customer->getChildDataAt('CustomerRet CreditLimit'),
+				'PreferredPaymentMethod_ListID' => $Customer->getChildDataAt('CustomerRet PreferredPaymentMethod ListID'),
+				'PreferredPaymentMethod_FullName' => $Customer->getChildDataAt('CustomerRet PreferredPaymentMethod FullName'),
+				'CreditCardInfo_CreditCardNumber' => $Customer->getChildDataAt('CustomerRet CreditCardInfo CreditCardNumber'),
+				'CreditCardInfo_ExpirationMonth' => $Customer->getChildDataAt('CustomerRet CreditCardInfo ExpirationMonth'),
+				'CreditCardInfo_ExpirationYear' => $Customer->getChildDataAt('CustomerRet CreditCardInfo ExpirationYear'),
+				'CreditCardInfo_NameOnCard' => $Customer->getChildDataAt('CustomerRet CreditCardInfo NameOnCard'),
+				'CreditCardInfo_CreditCardAddress' => $Customer->getChildDataAt('CustomerRet CreditCardInfo CreditCardAddress'),
+				'CreditCardInfo_CreditCardPostalCode' => $Customer->getChildDataAt('CustomerRet CreditCardInfo CreditCardPostalCode'),
+				'JobStatus' => $Customer->getChildDataAt('CustomerRet JobStatus'),
+				'JobStartDate' => $Customer->getChildDataAt('CustomerRet JobStartDate'),
+				'JobProjectedEndDate' => $Customer->getChildDataAt('CustomerRet JobProjectedEndDate'),
+				'JobEndDate' => $Customer->getChildDataAt('CustomerRet JobEndDate'),
+				'JobDesc' => $Customer->getChildDataAt('CustomerRet JobDesc'),
+				'JobType_ListID' => $Customer->getChildDataAt('CustomerRet JobType ListID'),
+				'JobType_FullName' => $Customer->getChildDataAt('CustomerRet JobType FullName'),
+				'Notes' => $Customer->getChildDataAt('CustomerRet Notes'),
+				'PriceLevel_ListID' => $Customer->getChildDataAt('CustomerRet PriceLevel ListID'),
+				'PriceLevel_FullName' => $Customer->getChildDataAt('CustomerRet PriceLevel FullName')
 				);
-			
+			/*error_log("
+			REPLACE INTO
+			qb_example_customer
+		(
+			" . implode(", ", array_keys($arr)) . "
+		) VALUES (
+			'" . implode("', '", array_values($arr)) . "'
+		)");*/
 			QuickBooks_Utilities::log(QB_QUICKBOOKS_DSN, 'Importing customer ' . $arr['FullName'] . ': ' . print_r($arr, true));
-			
+			$dblink = mysqli_connect("localhost", "root", "", "quickbooks_sqli");
 			foreach ($arr as $key => $value)
 			{
 				$arr[$key] = mysqli_real_escape_string($dblink, $value);
@@ -421,7 +401,7 @@ function _quickbooks_customer_import_response($requestID, $user, $action, $ID, $
 					" . implode(", ", array_keys($arr)) . "
 				) VALUES (
 					'" . implode("', '", array_values($arr)) . "'
-				)") or die(trigger_error(mysqli_connect_error()));
+				)"); //or die(trigger_error(mysqli_connect_error()));
 		}
 	}
 	
@@ -489,7 +469,7 @@ function _quickbooks_error_catchall($requestID, $user, $action, $ID, $extra, &$e
 	$message .= 'Error number: ' . $errnum . "\r\n";
 	$message .= 'Error message: ' . $errmsg . "\r\n";
 	
-	mail(QB_QUICKBOOKS_MAILTO, 
+	@mail(QB_QUICKBOOKS_MAILTO, 
 		'QuickBooks error occured!', 
 		$message);
 }
