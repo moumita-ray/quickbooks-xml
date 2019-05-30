@@ -1,0 +1,4046 @@
+
+
+Log file initialized at Thursday, May 30, 2019 - 12:20 PM UTC  
+Timestamp format used: YYYYMMDD.HH:MM:SS UTC
+QBWebConnector 2.2 has been initialized with its logging status to level = VERBOSE.
+Please restart QBWebConnector for any change in log level to take effect. Use file menu to clear log.
+
+20190530.12:20:03 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : hresult=""
+20190530.12:20:03 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : message=""
+20190530.12:20:04 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : Received from receiveResponseXML() following parameters:
+20190530.12:20:04 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : more="83">
+20190530.12:20:04 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : There are more requests to process.
+20190530.12:20:04 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : Asking application to send request no. 6
+20190530.12:20:04 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : *** Calling sendRequestXML() with following parameters:
+20190530.12:20:04 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : wcTicket="d73e6639-d3ea-e184-a128-d4dfe17ea3be"
+20190530.12:20:04 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : HCPResponseXML=
+20190530.12:20:04 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : 
+20190530.12:20:04 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : cfn="C:\Users\Public\Documents\Intuit\QuickBooks\Sample Company Files\QuickBooks Enterprise Solutions 18.0\sample_wholesale-distribution business.QBW"
+20190530.12:20:04 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : qbNationality="US"
+20190530.12:20:04 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : qbXMLMajorVers="13"
+20190530.12:20:04 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : qbXMLMinorVers="0"
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : Received from sendRequestXML() following parameter:
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : strRequestXML =
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : XML dump follows: -
+
+<?xml version="1.0" encoding="utf-8"?>
+		<?qbxml version="13.0"?>
+		<QBXML>
+			<QBXMLMsgsRq onError="stopOnError">
+				<CustomerQueryRq  iterator="Continue"   iteratorID="{8ce98e42-b5f3-4523-b5b4-7d0ce06d0db6}"  requestID="167">
+					<MaxReturned>10</MaxReturned>
+					<FromModifiedDate>2019-05-30T08:00:59</FromModifiedDate>
+					<OwnerID>0</OwnerID>
+				</CustomerQueryRq>	
+			</QBXMLMsgsRq>
+		</QBXML>
+
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : Request xml received.
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.ProcessRequestXML() : Processing request #6
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.ProcessRequestXML() : REQUEST: received from application: size (bytes) = 404
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.ProcessRequestXML() : Sending request to QuickBooks.
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.ProcessRequestXML() : Response received from QuickBooks: size (bytes) = 65892
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.ProcessRequestXML() : Sending response back to application.
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : *** Calling receiveResponseXML() with following parameters:
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : wcTicket="d73e6639-d3ea-e184-a128-d4dfe17ea3be"
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : response =
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : XML dump follows: -
+
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<CustomerQueryRs requestID="167" statusCode="0" statusSeverity="Info" statusMessage="Status OK" iteratorRemainingCount="5" iteratorID="{8ce98e42-b5f3-4523-b5b4-7d0ce06d0db6}">
+<CustomerRet>
+<ListID>7C0000-1047591076</ListID>
+<TimeCreated>2003-03-13T14:31:16-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Sean Martin</Name>
+<FullName>Miscellaneous - Retail:Sean Martin</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<Addr3>Poway, CA 97865</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<Addr3>Poway, CA 97865</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>447-555-1112</Phone>
+<Contact>Sean Martin</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>447-555-1112</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KF3</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Sean Martin</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+<PriceLevelRef>
+<ListID>30000-1055539543</ListID>
+<FullName>Retail</FullName>
+</PriceLevelRef>
+</CustomerRet>
+<CustomerRet>
+<ListID>7B0000-1047589649</ListID>
+<TimeCreated>2003-03-13T14:07:29-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Jann Minor</Name>
+<FullName>Miscellaneous - Retail:Jann Minor</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<Addr3>Lilly, MN 34567</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<Addr3>Lilly, MN 34567</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>321-555-8795</Phone>
+<Contact>Jann Minor</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>321-555-8795</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KF5</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Jann Minor</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+<PriceLevelRef>
+<ListID>30000-1055539543</ListID>
+<FullName>Retail</FullName>
+</PriceLevelRef>
+</CustomerRet>
+<CustomerRet>
+<ListID>7A0000-1047589588</ListID>
+<TimeCreated>2003-03-13T14:06:28-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Jason Helper</Name>
+<FullName>Miscellaneous - Retail:Jason Helper</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<Addr3>Famousville, CA 98076</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<Addr3>Famousville, CA 98076</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>910-555-1235</Phone>
+<Contact>Jason Helper</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>910-555-1235</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KF7</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Jason Helper</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+<PriceLevelRef>
+<ListID>30000-1055539543</ListID>
+<FullName>Retail</FullName>
+</PriceLevelRef>
+</CustomerRet>
+<CustomerRet>
+<ListID>790000-1047589535</ListID>
+<TimeCreated>2003-03-13T14:05:35-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>John Huhn</Name>
+<FullName>Miscellaneous - Retail:John Huhn</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<Addr3>Maryland, TN 45678</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<Addr3>Maryland, TN 45678</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>984-555-9874</Phone>
+<Contact>John Huhn</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>984-555-9874</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KF9</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>John Huhn</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>InProgress</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<Notes>Waiting on his order -- backordered from manufacturer 4/18/07
+</Notes>
+<AdditionalNotesRet>
+<NoteID>0</NoteID>
+<Date>2011-07-27</Date>
+<Note>Waiting on his order -- backordered from manufacturer 4/18/07
+</Note>
+</AdditionalNotesRet>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+<PriceLevelRef>
+<ListID>30000-1055539543</ListID>
+<FullName>Retail</FullName>
+</PriceLevelRef>
+</CustomerRet>
+<CustomerRet>
+<ListID>780000-1047589475</ListID>
+<TimeCreated>2003-03-13T14:04:35-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Doug Jacobsen</Name>
+<FullName>Miscellaneous - Retail:Doug Jacobsen</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<Addr3>Cold Canyon, TX 65789</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<Addr3>Cold Canyon, TX 65789</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>210-555-6578</Phone>
+<Contact>Doug Jacobsen</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>210-555-6578</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KFB</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Doug Jacobsen</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+<PriceLevelRef>
+<ListID>30000-1055539543</ListID>
+<FullName>Retail</FullName>
+</PriceLevelRef>
+</CustomerRet>
+<CustomerRet>
+<ListID>660001-1047589434</ListID>
+<TimeCreated>2003-03-13T14:03:54-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Peter Karpas</Name>
+<FullName>Miscellaneous - Retail:Peter Karpas</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<Addr3>Summersville, GA 89076</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<Addr3>Summersville, GA 89076</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>560-555-1521</Phone>
+<Contact>Peter Karpas</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>560-555-1521</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KFD</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Peter Karpas</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+<PriceLevelRef>
+<ListID>30000-1055539543</ListID>
+<FullName>Retail</FullName>
+</PriceLevelRef>
+</CustomerRet>
+<CustomerRet>
+<ListID>3D0002-1047589381</ListID>
+<TimeCreated>2003-03-13T14:03:01-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Valesha Jones</Name>
+<FullName>Miscellaneous - Retail:Valesha Jones</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<Addr3>Aublum, CA 97654</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<Addr3>Aublum, CA 97654</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>560-555-4151</Phone>
+<Contact>Valesha Jones</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>560-555-4151</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KFF</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Valesha Jones</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+<PriceLevelRef>
+<ListID>30000-1055539543</ListID>
+<FullName>Retail</FullName>
+</PriceLevelRef>
+</CustomerRet>
+<CustomerRet>
+<ListID>490002-1047589347</ListID>
+<TimeCreated>2003-03-13T14:02:27-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Melanie Hall</Name>
+<FullName>Miscellaneous - Retail:Melanie Hall</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<Addr3>Aublum, CA 98765</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<Addr3>Aublum, CA 98765</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>560-555-9811</Phone>
+<Contact>Melanie Hall</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>560-555-9811</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KFH</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Melanie Hall</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+</CustomerRet>
+<CustomerRet>
+<ListID>750001-1047589307</ListID>
+<TimeCreated>2003-03-13T14:01:47-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Lara Gussman</Name>
+<FullName>Miscellaneous - Retail:Lara Gussman</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<Addr3>Grassville, CA 95675</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<Addr3>Grassville, CA 95675</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>321-555-9817</Phone>
+<Contact>Lara Gussman</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>321-555-9817</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KFJ</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Lara Gussman</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<SalesRepRef>
+<ListID>30000-1046825644</ListID>
+<FullName>VK</FullName>
+</SalesRepRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+</CustomerRet>
+<CustomerRet>
+<ListID>770000-1047576583</ListID>
+<TimeCreated>2003-03-13T10:29:43-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Alison Johnson</Name>
+<FullName>Miscellaneous - Retail:Alison Johnson</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<Addr3>Wrong City, CA 94876</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<Addr3>Wrong City, CA 94876</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>981-555-1519</Phone>
+<Contact>Alison Johnson</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>981-555-1519</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KFL</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Alison Johnson</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+</CustomerRet>
+</CustomerQueryRs>
+</QBXMLMsgsRs>
+</QBXML>
+
+
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : hresult=""
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : message=""
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : Received from receiveResponseXML() following parameters:
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : more="85">
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : There are more requests to process.
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : Asking application to send request no. 7
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : *** Calling sendRequestXML() with following parameters:
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : wcTicket="d73e6639-d3ea-e184-a128-d4dfe17ea3be"
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : HCPResponseXML=
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : 
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : cfn="C:\Users\Public\Documents\Intuit\QuickBooks\Sample Company Files\QuickBooks Enterprise Solutions 18.0\sample_wholesale-distribution business.QBW"
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : qbNationality="US"
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : qbXMLMajorVers="13"
+20190530.12:20:05 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : qbXMLMinorVers="0"
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : Received from sendRequestXML() following parameter:
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : strRequestXML =
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : XML dump follows: -
+
+<?xml version="1.0" encoding="utf-8"?>
+		<?qbxml version="13.0"?>
+		<QBXML>
+			<QBXMLMsgsRq onError="stopOnError">
+				<CustomerQueryRq  iterator="Continue"   iteratorID="{8ce98e42-b5f3-4523-b5b4-7d0ce06d0db6}"  requestID="168">
+					<MaxReturned>10</MaxReturned>
+					<FromModifiedDate>2019-05-30T08:00:59</FromModifiedDate>
+					<OwnerID>0</OwnerID>
+				</CustomerQueryRq>	
+			</QBXMLMsgsRq>
+		</QBXML>
+
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_sendRequestXML() : Request xml received.
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.ProcessRequestXML() : Processing request #7
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.ProcessRequestXML() : REQUEST: received from application: size (bytes) = 404
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.ProcessRequestXML() : Sending request to QuickBooks.
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.ProcessRequestXML() : Response received from QuickBooks: size (bytes) = 32666
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.ProcessRequestXML() : Sending response back to application.
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : *** Calling receiveResponseXML() with following parameters:
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : wcTicket="d73e6639-d3ea-e184-a128-d4dfe17ea3be"
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : response =
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : XML dump follows: -
+
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<CustomerQueryRs requestID="168" statusCode="0" statusSeverity="Info" statusMessage="Status OK" iteratorRemainingCount="0" iteratorID="{8ce98e42-b5f3-4523-b5b4-7d0ce06d0db6}">
+<CustomerRet>
+<ListID>5D0001-1046997400</ListID>
+<TimeCreated>2003-03-06T16:36:40-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Mrs. Chris Holly</Name>
+<FullName>Miscellaneous - Retail:Mrs. Chris Holly</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<Addr3>Hay Valley, CA 94765</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<Addr3>Hay Valley, CA 94765</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>451-555-9815</Phone>
+<Contact>Chris Holley</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>451-555-9815</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KFN</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Chris Holley</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>Pending</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+</CustomerRet>
+<CustomerRet>
+<ListID>3E0001-1046994049</ListID>
+<TimeCreated>2003-03-06T15:40:49-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Ms. Jann Minor</Name>
+<FullName>Miscellaneous - Retail:Ms. Jann Minor</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<Addr3>Far Away, TN 46579</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<Addr3>Far Away, TN 46579</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>411-555-1128</Phone>
+<Contact>Jann Minor</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>411-555-1128</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KFP</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Jann Minor</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+</CustomerRet>
+<CustomerRet>
+<ListID>3F0001-1046993979</ListID>
+<TimeCreated>2003-03-06T15:39:39-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Mr. Fred Kaseman</Name>
+<FullName>Miscellaneous - Retail:Mr. Fred Kaseman</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<Addr3>Nuttyton, CA 97665</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<Addr3>Nuttyton, CA 97665</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>210-555-2351</Phone>
+<Contact>Fred Kaseman</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>210-555-2351</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KFR</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Fred Kaseman</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+</CustomerRet>
+<CustomerRet>
+<ListID>520003-1046993926</ListID>
+<TimeCreated>2003-03-06T15:38:46-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Mr. Jay Jessen</Name>
+<FullName>Miscellaneous - Retail:Mr. Jay Jessen</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<Addr3>Famousville, CA 98765</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<Addr3>Famousville, CA 98765</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>410-555-8912</Phone>
+<Contact>Jay Jessen</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>410-555-8912</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KFT</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Jay Jessen</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+</CustomerRet>
+<CustomerRet>
+<ListID>410001-1046993844</ListID>
+<TimeCreated>2003-03-06T15:37:24-08:00</TimeCreated>
+<TimeModified>2021-12-15T04:59:45-08:00</TimeModified>
+<EditSequence>1639573185</EditSequence>
+<Name>Mrs. Anne Hemp</Name>
+<FullName>Miscellaneous - Retail:Mrs. Anne Hemp</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>420001-1046993771</ListID>
+<FullName>Miscellaneous - Retail</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<BillAddress>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+</BillAddress>
+<BillAddressBlock>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<Addr3>Hill Mt., CA 95487</Addr3>
+</BillAddressBlock>
+<ShipAddress>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+</ShipAddress>
+<ShipAddressBlock>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<Addr3>Hill Mt., CA 95487</Addr3>
+</ShipAddressBlock>
+<ShipToAddress>
+<Name>Valesha Jones</Name>
+<Addr1>Valesha Jones</Addr1>
+<Addr2>908 Lime Kilm Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>97654</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ms. Jann Minor</Name>
+<Addr1>Ms. Jann Minor</Addr1>
+<Addr2>3459 Dead End Court</Addr2>
+<City>Far Away</City>
+<State>TN</State>
+<PostalCode>46579</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Fred Kaseman</Name>
+<Addr1>Mr. Fred Kaseman</Addr1>
+<Addr2>67654 Pinion Way</Addr2>
+<City>Nuttyton</City>
+<State>CA</State>
+<PostalCode>97665</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Anne Hemp</Name>
+<Addr1>Mrs. Anne Hemp</Addr1>
+<Addr2>1234 Right Way</Addr2>
+<City>Hill Mt.</City>
+<State>CA</State>
+<PostalCode>95487</PostalCode>
+<DefaultShipTo>true</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mr. Jay Jessen</Name>
+<Addr1>Mr. Jay Jessen</Addr1>
+<Addr2>876 Trickle Lane</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Melanie Hall</Name>
+<Addr1>Melanie Hall</Addr1>
+<Addr2>87 Cat Stevens Rd.</Addr2>
+<City>Aublum</City>
+<State>CA</State>
+<PostalCode>98765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Mrs. Chris Holly</Name>
+<Addr1>Mrs. Chris Holly</Addr1>
+<Addr2>45 Second Street</Addr2>
+<City>Hay Valley</City>
+<State>CA</State>
+<PostalCode>94765</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Peter Karpas</Name>
+<Addr1>Peter Karpas</Addr1>
+<Addr2>765 Golden Rod Ave.</Addr2>
+<City>Summersville</City>
+<State>GA</State>
+<PostalCode>89076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Lara Gussman</Name>
+<Addr1>Lara Gussman</Addr1>
+<Addr2>3456 Little Valley</Addr2>
+<City>Grassville</City>
+<State>CA</State>
+<PostalCode>95675</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Alison Johnson</Name>
+<Addr1>Alison Johnson</Addr1>
+<Addr2>12 Which Way</Addr2>
+<City>Wrong City</City>
+<State>CA</State>
+<PostalCode>94876</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Doug Jacobsen</Name>
+<Addr1>Doug Jacobsen</Addr1>
+<Addr2>6754 Hick Way</Addr2>
+<City>Cold Canyon</City>
+<State>TX</State>
+<PostalCode>65789</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Brian Stern</Name>
+<Addr1>Brian Stern</Addr1>
+<Addr2>7689 Boulder Rd.</Addr2>
+<City>Bayshore</City>
+<State>CA</State>
+<PostalCode>95678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>John Huhn</Name>
+<Addr1>John Huhn</Addr1>
+<Addr2>3456 Spring Valley Rd.</Addr2>
+<City>Maryland</City>
+<State>TN</State>
+<PostalCode>45678</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jason Helper</Name>
+<Addr1>Jason Helper</Addr1>
+<Addr2>679045 Fairview Ct.</Addr2>
+<City>Famousville</City>
+<State>CA</State>
+<PostalCode>98076</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Jann Minor</Name>
+<Addr1>Jann Minor</Addr1>
+<Addr2>765 Dogwood Way</Addr2>
+<City>Lilly</City>
+<State>MN</State>
+<PostalCode>34567</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Sean Martin</Name>
+<Addr1>Sean Martin</Addr1>
+<Addr2>76 Seal Lane</Addr2>
+<City>Poway</City>
+<State>CA</State>
+<PostalCode>97865</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Anne Loomis</Name>
+<Addr1>Anne Loomis</Addr1>
+<Addr2>7654 Front Street</Addr2>
+<City>Digs</City>
+<State>CO</State>
+<PostalCode>70986</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Carlos Nazar</Name>
+<Addr1>Carlos Nazar</Addr1>
+<Addr2>5436 Hickman Dr.</Addr2>
+<City>Littleton</City>
+<State>CO</State>
+<PostalCode>70586</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>David Lo</Name>
+<Addr1>David Lo</Addr1>
+<Addr2>78 First Street</Addr2>
+<City>Pleasantville</City>
+<State>CA</State>
+<PostalCode>94568</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<ShipToAddress>
+<Name>Ruth Kuver</Name>
+<Addr1>Ruth Kuver</Addr1>
+<Addr2>34 Main Street</Addr2>
+<City>Big Town</City>
+<State>PA</State>
+<PostalCode>34576</PostalCode>
+<DefaultShipTo>false</DefaultShipTo>
+</ShipToAddress>
+<Phone>650-555-9751</Phone>
+<Contact>Anne Hemp</Contact>
+<AdditionalContactRef>
+<ContactName>Main Phone</ContactName>
+<ContactValue>650-555-9751</ContactValue>
+</AdditionalContactRef>
+<ContactsRet>
+<ListID>0000000000002KFV</ListID>
+<TimeCreated>2012-07-27T09:31:09-08:00</TimeCreated>
+<TimeModified>2012-07-27T09:31:09-08:00</TimeModified>
+<EditSequence>1343406669</EditSequence>
+<FirstName>Anne Hemp</FirstName>
+</ContactsRet>
+<CustomerTypeRef>
+<ListID>40000-1046824655</ListID>
+<FullName>Website</FullName>
+</CustomerTypeRef>
+<TermsRef>
+<ListID>10000-898307882</ListID>
+<FullName>Due on receipt</FullName>
+</TermsRef>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<JobStatus>None</JobStatus>
+<JobTypeRef>
+<ListID>30000-1039825773</ListID>
+<FullName>On-line/Retail</FullName>
+</JobTypeRef>
+<PreferredDeliveryMethod>None</PreferredDeliveryMethod>
+</CustomerRet>
+</CustomerQueryRs>
+</QBXMLMsgsRs>
+</QBXML>
+
+
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : hresult=""
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : message=""
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : Received from receiveResponseXML() following parameters:
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : more="100">
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_receiveResponseXML() : Done. No more to process.
+20190530.12:20:06 UTC	: QBWebConnector.CompanyFileLock.Send_CompanyQueryRqXML() : XML dump follows: -
+
+<?xml version="1.0"?><?qbxml version="13.0"?><QBXML><QBXMLMsgsRq onError="stopOnError"><CompanyQueryRq requestID="1"><OwnerID>{90A44FB7-33D9-4815-AC85-AC86A7E7D1EB}</OwnerID></CompanyQueryRq></QBXMLMsgsRq></QBXML>
+
+20190530.12:20:06 UTC	: QBWebConnector.CompanyFileLock.Send_CompanyQueryRqXML() : XML dump follows: -
+
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<CompanyQueryRs requestID="1" statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+<CompanyRet>
+<IsSampleCompany>true</IsSampleCompany>
+<CompanyName>Wholesale/Distributor Sample File</CompanyName>
+<LegalCompanyName>Your Company Name Goes here</LegalCompanyName>
+<Address>
+<Addr1>110 Sampson Way</Addr1>
+<City>Middlefield</City>
+<State>CA</State>
+<PostalCode>94471</PostalCode>
+<Country>US</Country>
+</Address>
+<AddressBlock>
+<Addr1>110 Sampson Way</Addr1>
+<Addr2>Middlefield, CA  94471</Addr2>
+</AddressBlock>
+<LegalAddress>
+<Addr1>110 Sampson Way</Addr1>
+<City>Middlefield</City>
+<State>CA</State>
+<PostalCode>94471</PostalCode>
+<Country>US</Country>
+</LegalAddress>
+<CompanyAddressForCustomer>
+<Addr1>110 Sampson Way</Addr1>
+<City>Palo Alto</City>
+<State>CA</State>
+<PostalCode>94521</PostalCode>
+</CompanyAddressForCustomer>
+<CompanyAddressBlockForCustomer>
+<Addr1>110 Sampson Way</Addr1>
+<Addr2>Palo Alto, CA  94521</Addr2>
+</CompanyAddressBlockForCustomer>
+<Phone>650-555-1212</Phone>
+<Fax>650-555-1313</Fax>
+<Email>info@samplecompany.com</Email>
+<CompanyWebSite>www.samplecompany.com</CompanyWebSite>
+<FirstMonthFiscalYear>January</FirstMonthFiscalYear>
+<FirstMonthIncomeTaxYear>January</FirstMonthIncomeTaxYear>
+<CompanyType>WholesaleDistributionandSales</CompanyType>
+<EIN>55-5555555</EIN>
+<TaxForm>Form1040</TaxForm>
+<SubscribedServices>
+<Service>
+<Name>QuickBooks Online Banking</Name>
+<Domain>banking.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Online Billing</Name>
+<Domain>billing.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Online Billing Level 1 Service</Name>
+<Domain>qbob1.qbn</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Online Billing Level 2 Service</Name>
+<Domain>qbob2.qbn</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Online Billing Payment Service</Name>
+<Domain>qbobpay.qbn</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Bill Payment</Name>
+<Domain>billpay.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Online Billing Paper Mailing Service</Name>
+<Domain>qbobpaper.qbn</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Payroll Service</Name>
+<Domain>payroll.qb</Domain>
+<ServiceStatus>Active</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Basic Payroll Service</Name>
+<Domain>payrollbsc.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Basic Disk Payroll Service</Name>
+<Domain>payrollbscdisk.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Deluxe Payroll Service</Name>
+<Domain>payrolldlx.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Premier Payroll Service</Name>
+<Domain>payrollprm.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>Basic Plus Federal</Name>
+<Domain>basic_plus_fed.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>Basic Plus Federal and State</Name>
+<Domain>basic_plus_fed_state.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>Basic Plus Direct Deposit</Name>
+<Domain>basic_plus_dd.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>Merchant Account Service</Name>
+<Domain>mas.qbn</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+</SubscribedServices>
+<AccountantCopy>
+<AccountantCopyExists>false</AccountantCopyExists>
+</AccountantCopy>
+<DataExtRet>
+<OwnerID>{90A44FB7-33D9-4815-AC85-AC86A7E7D1EB}</OwnerID>
+<DataExtName>AppLock</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>LOCKED:MOUMITA:636948155984807268</DataExtValue>
+</DataExtRet>
+<DataExtRet>
+<OwnerID>{90A44FB7-33D9-4815-AC85-AC86A7E7D1EB}</OwnerID>
+<DataExtName>FileID</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>{57F3B9B6-86F1-4fcc-B1FF-967DE1813D20}</DataExtValue>
+</DataExtRet>
+</CompanyRet>
+</CompanyQueryRs>
+</QBXMLMsgsRs>
+</QBXML>
+
+
+20190530.12:20:06 UTC	: QBWebConnector.CompanyFileLock.getLock() : Got Lock = LOCKED:MOUMITA:636948155984807268
+20190530.12:20:06 UTC	: QBWebConnector.CompanyFileLock.Send_DataExtModRqXML() : XML dump follows: -
+
+<?xml version="1.0"?><?qbxml version="13.0"?><QBXML><QBXMLMsgsRq onError="stopOnError"><DataExtModRq requestID="1"><DataExtMod><OwnerID>{90A44FB7-33D9-4815-AC85-AC86A7E7D1EB}</OwnerID><DataExtName>AppLock</DataExtName><OtherDataExtType>Company</OtherDataExtType><DataExtValue>UNLOCKED:MOUMITA</DataExtValue></DataExtMod></DataExtModRq></QBXMLMsgsRq></QBXML>
+
+20190530.12:20:06 UTC	: QBWebConnector.CompanyFileLock.Send_DataExtModRqXML() : XML dump follows: -
+
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<DataExtModRs requestID="1" statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+<DataExtRet>
+<OwnerID>{90A44FB7-33D9-4815-AC85-AC86A7E7D1EB}</OwnerID>
+<DataExtName>AppLock</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>UNLOCKED:MOUMITA</DataExtValue>
+</DataExtRet>
+</DataExtModRs>
+</QBXMLMsgsRs>
+</QBXML>
+
+
+20190530.12:20:06 UTC	: QBWebConnector.CompanyFileLock.unsetLock() : Company file has been unlocked for ownerID = <{90A44FB7-33D9-4815-AC85-AC86A7E7D1EB}>
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.update() : Company file has been unlocked.
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.update() : Ending session to QuickBooks.
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.DisconnectFromQB() : Session ended and connection closed
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_closeConnection() : *** Calling closeConnection() with following parameter:<wcTicket="d73e6639-d3ea-e184-a128-d4dfe17ea3be">
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_closeConnection() : Received from closeConnection() following parameter:<ccResponse="Complete!">
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_closeConnection() : CloseConnection called to application.
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.do_closeConnection() : Response received from application = Complete!
+20190530.12:20:06 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20190530.12:20:06 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20190530.12:20:06 UTC	: QBWebConnector.SOAPWebService.update() : update completed.
+20190530.12:20:06 UTC	: QBWebConnector.WebServiceManager.DoUpdateSelected() : Update for application = 'QuickBooks-XML Customer Import to DB' has COMPLETED
+20190530.12:20:06 UTC	: QBWebConnector.WebServiceManager.DoUpdateSelected() : Update session has ended.
